@@ -18,7 +18,7 @@ app.use("/user", userRouter);
 
 const CONNECTION_URL =
 	`mongodb+srv://shivanshu:${process.env.pass}@cluster0.rft4g.mongodb.net/keep_memory?retryWrites=true&w=majority`;
-const PORT = process.env.PORT|| 5000;
+const PORT = process.env.PORT || 8000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
