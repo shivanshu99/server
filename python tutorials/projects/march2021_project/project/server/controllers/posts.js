@@ -1,10 +1,11 @@
+require("dotenv").config();
 import express from "express";
 import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
 import UserModal from "../models/user.js";
 import PostMessage from "../models/postMessage.js";
 import { createRequire } from "module";
-require("dotenv").config();
+
 const require = createRequire(import.meta.url);
 const sgMail = require("@sendgrid/mail");
 const emailSenderApi =
