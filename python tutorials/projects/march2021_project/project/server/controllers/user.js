@@ -1,3 +1,4 @@
+require("dotenv").config();
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import UserModal from "../models/user.js";
@@ -5,7 +6,7 @@ import { createRequire } from "module";
 import express from "express";
 const require = createRequire(
     import.meta.url);
-require("dotenv").config();
+
 const sgMail = require("@sendgrid/mail");
 const emailSenderApi = `${process.env.sgpass}`;
 const router = express.Router();
