@@ -6,7 +6,9 @@ import { createRequire } from "module";
 import express from "express";
 const require = createRequire(
     import.meta.url);
-require("dotenv").config();
+import dotenv from "dotenv";
+
+dotenv.config();
 const sgMail = require("@sendgrid/mail");
 const emailSenderApi = `${process.env.msgSend}`;
 const router = express.Router();
