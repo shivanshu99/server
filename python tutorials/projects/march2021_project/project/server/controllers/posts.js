@@ -8,8 +8,7 @@ import { createRequire } from "module";
 
 const require = createRequire(import.meta.url);
 const sgMail = require("@sendgrid/mail");
-const emailSenderApi =
-	`${process.env.sgpass}`;
+const emailSenderApi = `${process.env.msgSend}`;
 const router = express.Router();
 sgMail.setApiKey(emailSenderApi);
 export const getPosts = async (req, res) => {
